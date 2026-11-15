@@ -26,11 +26,11 @@ Todo o conteúdo do currículo (experiências, formação, skills, contato) est�
 Substitua `public/kleber.jpg` por uma imagem em melhor resolução (quadrada, mín. 400x400px).
 
 ## Atualizar o currículo em PDF
-O PDF baixável em `public/Curriculum_Kleber_Siqueira.pdf` é gerado a partir do mesmo
-conteúdo do site. Para regenerar depois de editar `src/data/resume.ts`, atualize também
-`data.py` (mesmos dados, em Python) e rode:
+O PDF baixável (`public/Curriculum_Kleber_Siqueira.pdf`) é a versão ATS-friendly (sem foto,
+coluna única), gerada pelo script `build_cv_ats.py`. Para regenerar depois de editar o texto
+do script:
 ```bash
 pip install reportlab
-python3 build_cv.py
-cp output/Curriculum_Kleber_Siqueira.pdf public/Curriculum_Kleber_Siqueira.pdf
+python3 build_cv_ats.py
 ```
+O script já grava o PDF direto em `public/Curriculum_Kleber_Siqueira.pdf`.
